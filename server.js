@@ -7,8 +7,6 @@ var corOption = {
     origin: "http://localhost:8081",
 };
 
-//  middle ware
-
 app.use(cors(corOption));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
