@@ -23,7 +23,7 @@ app.get("/jobs", (req, res) => {
                 });
             }
             else {
-                const jobs = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityVal},IN&appid=1378804aeafe0b631a88802bfd8d17d6`);
+                const jobs = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityVal},IN&appid=`);
                 client.setex(cityVal, 600, JSON.stringify(jobs.data));
                 res.status(200).send({
                     jobs: jobs.data,
